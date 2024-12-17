@@ -27,9 +27,9 @@ hdfs dfs -put /hadoop/labs/movielens/ /movielens
 
 4. On the resourcemanager :
 ```bash
-hadoop jar /hadoop/labs/Lab-2-Hadoop-1.0-SNAPSHOT.jar fr.etu.polytech.movielens.HighestRatedMoviePerUserId /input/ratings.csv /output/favoriteMoviePerUser
-hadoop jar /hadoop/labs/Lab-2-Hadoop-1.0-SNAPSHOT.jar fr.etu.polytech.movielens.NumberOfLikePerMovie /output/favoriteMoviePerUser /input/movies.csv /output/numberOfLikePerMovie
-hadoop jar /hadoop/labs/Lab-2-Hadoop-1.0-SNAPSHOT.jar fr.etu.polytech.movielens.GroupByNumberOfLikePerMovie /output/numberOfLikePerMovie /output/groupByNumberOfLikePerMovie
+hadoop jar /hadoop/labs/HadoopMovieLens-1.0.jar fr.etu.polytech.movielens.HighestRatedMoviePerUserId /input/ratings.csv /output/favoriteMoviePerUser
+hadoop jar /hadoop/labs/HadoopMovieLens-1.0.jar fr.etu.polytech.movielens.NumberOfLikePerMovie /output/favoriteMoviePerUser /input/movies.csv /output/numberOfLikePerMovie
+hadoop jar /hadoop/labs/HadoopMovieLens-1.0.jar fr.etu.polytech.movielens.GroupByNumberOfLikePerMovie /output/numberOfLikePerMovie /output/groupByNumberOfLikePerMovie
 ```
 
 5. Then the result is in "/output/groupByNumberOfLikePerMovie" directory on the hdfs in the file part-r-00000. You can download it from the UI or do this command :
