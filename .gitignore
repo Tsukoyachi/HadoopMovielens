@@ -1,4 +1,5 @@
 target/
+hadoop/movielens/*
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
