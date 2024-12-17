@@ -3,6 +3,8 @@
 Author : **Axel Delille**
 Project from **Polytech Nice Sophia** given by **Fabrice Huet**.
 
+In this readme, I won't cover the content of the hadoop configuration as it's not mine, if you want to use the docker compose and launch hadoop/hdfs, just modify the hostname and up the docker compose, it should work, if it don't you're on your own :/
+
 The goal of the project is from the inputs in hadoop/movielens/movies.csv and hadoop/movielens/ratings.csv to sort the movies by ascending number of like using hadoop Map Reduce.
 For that this project contains 3 java files :
 - HighestRatedMoviePerUserId : It take in parameter the ratings.csv file path on hdfs and an output path on hdfs and create a file where we have each userId with their favorite movieId (the first one that come in the reduce).
