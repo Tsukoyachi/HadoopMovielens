@@ -9,8 +9,6 @@ import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
-import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
-import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.GenericOptionsParser;
 
@@ -36,7 +34,7 @@ public class GroupByNumberOfLikePerMovie {
         j.setJarByClass(GroupByNumberOfLikePerMovie.class);
 
         j.setMapperClass(GroupByNumberOfLikePerMovie.MapForLikeNumber.class);
-        j.setReducerClass(GroupByNumberOfLikePerMovie.ReduceForLikeNumber.class);
+        j.setReducerClass(GroupByNumberOfLikePerMovie.ReduceForGroupBy.class);
 
         j.setOutputKeyClass(IntWritable.class);
         j.setOutputValueClass(Text.class);
@@ -65,7 +63,7 @@ public class GroupByNumberOfLikePerMovie {
         }
     }
 
-    public static class ReduceForLikeNumber extends Reducer<IntWritable, Text, IntWritable, Text> {
+    public static class ReduceForGroupBy extends Reducer<IntWritable, Text, IntWritable, Text> {
         public void reduce(IntWritable likeNumber, Iterable<Text> values, Context con) throws IOException, InterruptedException {
             List<String> titles = new ArrayList<>();
 

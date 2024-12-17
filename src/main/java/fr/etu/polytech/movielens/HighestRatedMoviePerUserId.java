@@ -23,7 +23,6 @@ public class HighestRatedMoviePerUserId {
         Configuration c = new Configuration();
         String[] files = new GenericOptionsParser(c, args).getRemainingArgs();
         System.out.println("Highest rating movie per user id");
-        log.info("bonjour");
         Path input = new Path(files[0]);
         Path output = new Path(files[1]);
         System.out.println(output.toString());
