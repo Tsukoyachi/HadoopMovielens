@@ -24,7 +24,7 @@ You can then replace the jar in ./resourcemanager with the generated ./target/La
 
 3. On the namenode :
 ```bash
-hdfs dfs -put /hadoop/labs/movielens/ /movielens
+hdfs dfs -put /hadoop/labs/movielens/ /input
 ```
 
 4. On the resourcemanager :
